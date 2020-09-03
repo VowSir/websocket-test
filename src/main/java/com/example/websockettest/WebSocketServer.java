@@ -10,7 +10,6 @@ import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
 import java.io.IOException;
-import java.util.Date;
 import java.util.concurrent.ConcurrentHashMap;
 
 
@@ -52,10 +51,10 @@ public class WebSocketServer {
         try {
             sendMessage("连接成功");
             //todo 监听如果有数据更新则向前端发送消息,参考观察者模式
-            while (true){
-                Thread.sleep(5000);
-                sendMessage("服务端需要发消息了======" + new Date());
-            }
+//            while (true){
+//                Thread.sleep(5000);
+//                sendMessage("服务端需要发消息了======" + new Date());
+//            }
         } catch (IOException e) {
             log.error("用户:"+userId+",网络异常!!!!!!");
         }
